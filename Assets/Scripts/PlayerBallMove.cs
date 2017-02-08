@@ -17,11 +17,11 @@ public class PlayerBallMove : MonoBehaviour {
 	
 	// FixedUpdate is called once per physics frame, this is locked to a fixed framerate
 	void FixedUpdate () {
-		mForce.x = GameController.GetInput (GameController.Directions.MoveX);		
-		mForce.z = GameController.GetInput (GameController.Directions.MoveY);
+		mForce.x = InputController.GetInput (InputController.Directions.MoveX);		
+		mForce.z = InputController.GetInput (InputController.Directions.MoveY);
 		mRB.AddForce (mForce*Sensitivity);
 		mForce.x = mForce.z = 0f;
-		mForce.y = GameController.GetInput (GameController.Directions.Jump);
+		mForce.y = InputController.GetInput (InputController.Directions.Jump);
 		mRB.AddForce (mForce,ForceMode.Impulse);
 	}
 }

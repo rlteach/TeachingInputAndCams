@@ -10,7 +10,6 @@ public class Crystal : MonoBehaviour {
 
 	public	Color	FromColour;
 	public	Color	ToColour;
-	float	mColour=0.0f;
 
 	// Use this for initialization
 	void 	Start () {

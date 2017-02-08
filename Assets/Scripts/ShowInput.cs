@@ -18,12 +18,12 @@ public class ShowInput : MonoBehaviour {
 	
 	//Example of how to read the input from central manager
 	void Update () {
-        mMove.x = GameController.GetInput(GameController.Directions.MoveX);
-        mMove.y = GameController.GetInput(GameController.Directions.MoveY);
-        mRotate.x = GameController.GetInput(GameController.Directions.RotateX);
-        mRotate.y = GameController.GetInput(GameController.Directions.RotateY);
-        float tFire = GameController.GetInput(GameController.Directions.Fire);
-        float tZoom = GameController.GetInput(GameController.Directions.Zoom);
+		mMove.x = InputController.GetInput(InputController.Directions.MoveX);
+		mMove.y = InputController.GetInput(InputController.Directions.MoveY);
+		mRotate.x = InputController.GetInput(InputController.Directions.RotateX);
+		mRotate.y = InputController.GetInput(InputController.Directions.RotateY);
+		float tFire = InputController.GetInput(InputController.Directions.Fire);
+		float tZoom = InputController.GetInput(InputController.Directions.Zoom);
         mText.text = string.Format("Move {0:f2}\n", mMove);
         mText.text += string.Format("Rotate {0:f2}\n", mRotate);
         mText.text += string.Format("Zoom:{0:f2} Fire:{1:f2}",tZoom,tFire);
